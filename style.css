@@ -1,4 +1,5 @@
 body {
+  font-family: 'Press Start 2P', cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,6 +10,7 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -21,34 +23,43 @@ body {
   border: 1px solid #fff;
   background-color: #fff;
   border-radius: 50%;
-  width: 800px;
-  height: 800px;
+  box-shadow: 0, 0, 20px lightgray;
+  width: 650px;
+  height: 650px;
 }
 
 .green {
-  grid-area: verde;
   background-color: green;
   border-top-left-radius: 100%;
+  grid-area: verde;
 }
 
 .red {
-  grid-area: vermelho;
   background-color: red;
   border-top-right-radius: 100%;
+  grid-area: vermelho;
 }
 
 .yellow {
-  grid-area: amarelo;
   background-color: yellow;
   border-bottom-left-radius: 100%;
+  grid-area: amarelo;
 }
 
 .blue {
-  grid-area: azul;
   background-color: blue;
   border-bottom-right-radius: 100%;
+  grid-area: azul;
+}
+
+.green, .red, .yellow, .blue {
+  border: solid 2px black;
+  box-shadow: 5px 5px 10px rgba(100, 100, 100, 0.6);
+  opacity: 0.6;
+  transition: 100ms ease-in-out;
 }
 
 .selected {
-  opacity: 0.8;
+  transform: scale(1.03);
+  opacity: 1;
 }

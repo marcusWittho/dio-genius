@@ -13,6 +13,7 @@ const green = document.querySelector('.green');
 const red = document.querySelector('.red');
 const yellow = document.querySelector('.yellow');
 const blue = document.querySelector('.blue');
+const totalScore = document.querySelector('.score');
 
 const lightColor = (element, number) => {
   number *= 500;
@@ -23,7 +24,7 @@ const lightColor = (element, number) => {
 
   setTimeout(() => {
     element.classList.remove('selected');
-  });
+  }, number);
 }
 
 const shuffleOrder = () => {
@@ -46,6 +47,7 @@ const checkOrder = () => {
   }
 
   if(clicked.length === order.length) {
+    totalScore.innerHTML = `Score: ${score}`;
     alert(`Pontuação: ${score}\nVocê acertou! Iniciando o próximo nível.`);
     nextLevel();
   }
@@ -62,15 +64,18 @@ const click = (color) => {
 }
 
 const createColorElement = (color) => {
-  if(color == 0) {
-    return green;
-  } else if(color == 1) {
-    return red;
-  } else if(color == 2) {
-    return yellow;
-  } else if(color == 3) {
-    return blue;
-  };
+  switch (true) {
+    case (color == 0):
+      return green;
+    case (color == 1):
+      return red;
+    case (color == 2):
+      return yellow;
+    case (color == 3):
+      return blue;
+    default:
+      break;
+  }
 }
 
 const nextLevel = () => {
@@ -79,24 +84,20 @@ const nextLevel = () => {
 }
 
 const playGame = () => {
-  alert(`Bem vindo ao Genius! Iniciando o jogo.`);
   score = 0;
+  totalScore.innerHTML = `Score: ${score}`;
+  alert(`Bem vindo ao Genius! Iniciando o jogo.`);
 
   nextLevel();
 }
 
 const gameOver = () => {
-  alert(`Pontuação: ${score}\nVocê perdeu o jogo.\nClique em 'Ok' para iniciar um novo jogo.`);
+  alert(`Você perdeu o jogo.\nClique em 'Ok' para iniciar um novo jogo.`);
   order = [];
   clicked = [];
 
   playGame();
 }
-
-// green.addEventListener('click', click(0));
-// red.addEventListener('click', click(1));
-// yellow.addEventListener('click', click(2));
-// blue.addEventListener('click', click(3));
 
 green.onclick = () => click(0);
 red.onclick = () => click(1);

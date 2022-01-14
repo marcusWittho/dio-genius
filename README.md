@@ -5,4 +5,4 @@ E sendo o desenvolvimento de um jogo, vamos nos divertir durante o desenvolvimen
 e depois de terminado também 😜
 
 [<img src="https://img.youtube.com/vi/3HeB63cLJNU/maxresdefault.jpg" width="50%">](https://youtu.be/3HeB63cLJNU)
-[!(https://share.gifyoutube.com/3HeB63cLJNU.gif)](https://www.youtube.com/watch?v=3HeB63cLJNU)
+[![Demo CountPages alpha](https://share.gifyoutube.com/3HeB63cLJNU.gif)](https://www.youtube.com/watch?v=3HeB63cLJNU)

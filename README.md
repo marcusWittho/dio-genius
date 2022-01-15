@@ -5,6 +5,4 @@ E sendo o desenvolvimento de um jogo, vamos nos divertir durante o desenvolvimen
 e depois de terminado também 😜
 
 ### Gameplay de demonstração 😁
-<div align="center">
-  ![Alt Text](gif/genius_2.gif)
-</div>
+![Gif de gameplay da aplicação](gif/genius_2.gif)
